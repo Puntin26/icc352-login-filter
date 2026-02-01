@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("io.javalin:javalin:6.7.0")
+    implementation "org.slf4j:slf4j-simple:2.0.17"//consola
+}
+
+application {
+    mainClass = "org.example.Main"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
