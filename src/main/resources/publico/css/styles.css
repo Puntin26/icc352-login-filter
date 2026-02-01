@@ -1,14 +1,56 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 2rem;
+    background: #f6f7fb;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: min(320px, 90vw);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    text-align: center;
 }
 
 form {
-    display: inline-block;
-    padding: 1rem;
-    border: 1px solid #ccc;
+    display: grid;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #374151;
+    display: grid;
+    gap: 0.25rem;
 }
 
 input {
-    margin: 0.25rem 0;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+button,
+.button {
+    display: inline-block;
+    padding: 0.6rem 0.9rem;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #1d4ed8;
 }
