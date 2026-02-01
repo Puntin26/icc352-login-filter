@@ -26,7 +26,9 @@ public class Main {
             //app
             app.before(/* "/", */ctx -> {
 
-                if(ctx.path().equals("/login.html") || ctx.path().equals("/procesarlogin")){
+                if(ctx.path().equals("/login.html")
+                        || ctx.path().equals("/procesarlogin")
+                        || ctx.path().startsWith("/css/")){
                     return;
                 }
 
@@ -40,9 +42,8 @@ public class Main {
             });
 
             //end point hola mundo
-            app.get("/", ctx -> {
-                ctx.result("Hello desde javalin");
-            });
+            app.get("/", ctx -> ctx.redirect("/index.html"));
+
 
             app.post("/procesarlogin", ctx -> {
                 String usuario = ctx.formParam("nombre");
